@@ -23,7 +23,12 @@ exports.sendMail = functions.firestore
       from: `FocalTasks <${process.env.EMAIL}>`,
       to: user.email,
       subject: "Welcome to FocalTasks!", // email subject
-      html: welcomeEmail,
+      html: welcomeEmail
+        .replace(
+          "{{unsubscribe}}",
+          `http://localhost:5001/focaltimer-dev/us-central1/unsubscribe?email=${user.email}`
+        )
+        .replace("{{fname}}", `${user.displayName.split(" ")[0]}`),
     };
 
     const userRef = db.doc(`EmailUsers/${user.uid}`);
@@ -41,3 +46,14 @@ exports.sendMail = functions.firestore
       return res.send("Sent");
     });
   });
+
+exports.unsubscribe = functions.https.onRequest((req, res) => {
+  cors(req, res, () => {
+    const { email } = req.query.email;
+    const userRef = db.doc(`EmailUsers/${email}`);
+    userRef.update({
+      unsubscribed: true,
+    });
+    res.send("Unsubscribed");
+  });
+});

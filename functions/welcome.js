@@ -221,7 +221,7 @@ module.exports = `
   <div role="article" aria-roledescription="email" aria-label="Welcome to FocalTasks!" lang="en">
     
     <div class="sm-p-8 space-y-3" style="margin-left: auto; margin-right: auto; width: 100%; max-width: 576px; background-color: #fffffe; padding: 24px; font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 16px; color: #000">
-      <p style="margin: 0">Hello 👋,</p>
+      <p style="margin: 0">Hello {{fname}}👋,</p>
       <p style="margin: 0; --tw-space-y-reverse: 0; margin-top: calc(12px * calc(1 - var(--tw-space-y-reverse))); margin-bottom: calc(12px * var(--tw-space-y-reverse))">
         <span style="font-weight: 600">Welcome to FocalTasks</span> - Your
         all-in-one productivity suite!
@@ -242,16 +242,16 @@ module.exports = `
           <img src="https://mail.focaltasks.com/images/feature5.gif" alt="Feature 3 gif" style="max-width: 100%; overflow: hidden; border-radius: 8px; border-width: 2px; border-style: solid; border-color: #e5e7eb">
         </div>
       </div>
-      <p style="margin: 0; --tw-space-y-reverse: 0; margin-top: calc(12px * calc(1 - var(--tw-space-y-reverse))); margin-bottom: calc(12px * var(--tw-space-y-reverse))">
+      <p style="margin: 0; --tw-space-y-reverse: 0; margin-top: 12px; margin-bottom: 12px">
         It's essential for us that we build a product that you'll love to use,
         so if you have questions or feedback just reply to this or any future
         emails.
       </p>
-      <p style="margin: 0; --tw-space-y-reverse: 0; margin-top: calc(12px * calc(1 - var(--tw-space-y-reverse))); margin-bottom: calc(12px * var(--tw-space-y-reverse))">
+      <p style="margin: 0; --tw-space-y-reverse: 0; margin-top: 12px; margin-bottom: 12px">
         <span style="font-weight: 600">Thanks so much for joining us!</span>
         <br> Michael Tong, Founder of FocalTasks
       </p>
-      <p style="margin: 0; --tw-space-y-reverse: 0; margin-top: calc(12px * calc(1 - var(--tw-space-y-reverse))); margin-bottom: calc(12px * var(--tw-space-y-reverse))">
+      <p style="margin: 0; --tw-space-y-reverse: 0; margin-top: 12px; margin-bottom: 12px">
         PS: Our public
         <a href="/" class="hover-text-blue-500" style="color: #000; text-decoration-line: underline">
           roadmap
@@ -259,11 +259,11 @@ module.exports = `
         will tell you what we're working on right now and which features are
         coming next.
       </p>
-      <div class="sm-p-6" style="border-radius: 16px; border-width: 2px; border-style: solid; border-color: #e5e7eb; padding: 16px; --tw-space-y-reverse: 0; margin-top: calc(12px * calc(1 - var(--tw-space-y-reverse))); margin-bottom: calc(12px * var(--tw-space-y-reverse))">
+      <div class="sm-p-6" style="border-radius: 16px; border-width: 2px; border-style: solid; border-color: #e5e7eb; padding: 16px; margin-top: 12px; margin-bottom: 12px">
         <div style="display: flex; flex-direction: row; align-items: center">
-          <div style="display: flex; align-items: center; gap: 8px">
-            <img src="https://app.focaltasks.com/logo192.png" alt="FocalTasks logo" style="height: 40px; width: 40px">
-            <p style="margin: 0; font-size: 20px; font-weight: 600">FocalTasks</p>
+          <div style="display: flex; align-items: center">
+            <img src="https://app.focaltasks.com/logo192.png" alt="FocalTasks logo" style="height: 40px; width: 40px; margin-right: 8px;">
+            <p style="margin: 0; font-size: 20px; font-weight: 600; margin-top: 6px;">FocalTasks</p>
           </div>
           <div style="margin-left: auto; display: flex; gap: 8px; color: #6b7280">
             <a href="https://instagram.com/focaltasks/">
@@ -288,7 +288,7 @@ module.exports = `
           <p style="margin: 0; color: #4b5563">
             © 2022 FocalTasks, Inc. All rights reserved.
           </p>
-          <a href="/" style="margin-left: auto; color: #6b7280; text-decoration-line: underline">
+          <a href="{{unsubscribe}}" style="margin-left: auto; color: #6b7280; text-decoration-line: underline">
             Unsubscribe
           </a>
         </div>
