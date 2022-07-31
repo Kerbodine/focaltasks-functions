@@ -4,6 +4,7 @@ const nodemailer = require("nodemailer");
 const cors = require("cors")({ origin: true });
 admin.initializeApp();
 const welcomeEmail = require("./welcome");
+const betaEmail = require("./beta");
 
 const transporter = nodemailer.createTransport({
   service: "gmail",
@@ -25,18 +26,19 @@ exports.sendMail = functions.firestore
       subject: "Welcome to FocalTasks!", // email subject
       html: welcomeEmail
         .replace(
-          "{{unsubscribe}}",
-          `http://localhost:5001/focaltimer-dev/us-central1/unsubscribe?email=${user.email}`
+          "{unsubscribe}",
+          `https://us-central1-focaltimer-dev.cloudfunctions.net/unsubscribe?email=${user.email}`
         )
-        .replace("{{fname}}", `${user.displayName.split(" ")[0]}`),
+        .replace("{name}", `${user.displayName.split(" ")[0]}`),
     };
 
-    const userRef = db.doc(`EmailUsers/${user.uid}`);
+    const userRef = db.doc(`EmailUsers/${user.email}`);
 
     userRef.set({
       uid: user.uid,
       email: user.email,
       displayName: user.displayName,
+      unsubscribed: false,
     });
 
     return transporter.sendMail(mailOptions, (erro, info) => {
@@ -55,5 +57,27 @@ exports.unsubscribe = functions.https.onRequest((req, res) => {
       unsubscribed: true,
     });
     res.send("Unsubscribed");
+  });
+});
+
+exports.sendBeta = functions.https.onRequest((req, res) => {
+  cors(req, res, () => {
+    const { email } = req.query;
+    const mailOptions = {
+      from: `FocalTasks <${process.env.EMAIL}>`,
+      to: email,
+      subject: "Welcome to the FocalTasks beta program!", // email subject
+      html: betaEmail.replace(
+        "{unsubscribe}",
+        `https://us-central1-focaltimer-dev.cloudfunctions.net/unsubscribe?email=${email}`
+      ),
+    };
+
+    return transporter.sendMail(mailOptions, (erro, info) => {
+      if (erro) {
+        return res.send(erro.toString());
+      }
+      return res.send("Sent");
+    });
   });
 });

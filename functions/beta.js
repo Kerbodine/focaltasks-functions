@@ -1,5 +1,4 @@
-module.exports = `
-<!DOCTYPE html>
+module.exports = `<!DOCTYPE html>
 <html lang="en" xmlns:v="urn:schemas-microsoft-com:vml">
 <head>
   <meta charset="utf-8">
@@ -22,7 +21,7 @@ module.exports = `
   </style>
   <![endif]-->
   
-    <title>Welcome to FocalTasks!</title>
+    <title>Thank you for joining the beta program!</title>
   
     <style>/* Preflight */
 /* @import 'tailwindcss/base'; */
@@ -39,20 +38,17 @@ module.exports = `
     margin-top: 16px !important;
     margin-bottom: 16px !important;
 }
+.mt-4 {
+    margin-top: 16px !important;
+}
 .block {
     display: block !important;
-}
-.inline-block {
-    display: inline-block !important;
 }
 .table {
     display: table !important;
 }
 .hidden {
     display: none !important;
-}
-.h-2px {
-    height: 2px !important;
 }
 .h-px {
     height: 1px !important;
@@ -103,17 +99,14 @@ module.exports = `
     margin-top: calc(16px * calc(1 - var(--tw-space-y-reverse))) !important;
     margin-bottom: calc(16px * var(--tw-space-y-reverse)) !important;
 }
+.overflow-hidden {
+    overflow: hidden !important;
+}
 .rounded {
     border-radius: 4px !important;
 }
 .border-0 {
     border-width: 0px !important;
-}
-.bg-_007aff {
-    background-color: #007aff !important;
-}
-.bg-gray-200 {
-    background-color: #e5e7eb !important;
 }
 .bg-slate-50 {
     background-color: #f8fafc !important;
@@ -136,27 +129,21 @@ module.exports = `
 .p-4 {
     padding: 16px !important;
 }
-.py-3_5 {
-    padding-top: 14px !important;
-    padding-bottom: 14px !important;
-}
-.px-4 {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
-}
 .py-3 {
     padding-top: 12px !important;
     padding-bottom: 12px !important;
 }
-.py-8 {
-    padding-top: 32px !important;
-    padding-bottom: 32px !important;
-}
 .text-xs {
     font-size: 12px !important;
 }
+.text-lg {
+    font-size: 18px !important;
+}
 .text-xl {
     font-size: 20px !important;
+}
+.font-bold {
+    font-weight: 700 !important;
 }
 .uppercase {
     text-transform: uppercase !important;
@@ -164,26 +151,14 @@ module.exports = `
 .italic {
     font-style: italic !important;
 }
-.leading-full {
-    line-height: 100% !important;
-}
-.leading-px {
-    line-height: 1px !important;
-}
-.tracking-6 {
-    letter-spacing: 24px !important;
-}
-.text-white {
-    color: #fff !important;
-}
 .text-slate-600 {
     color: #475569 !important;
 }
 .text-indigo-700 {
     color: #4338ca !important;
 }
-.mso-text-raise-4 {
-    mso-text-raise: 16px;
+.text-_007aff {
+    color: #007aff !important;
 }
 .mso-text-raise-7 {
     mso-text-raise: 28px;
@@ -191,17 +166,8 @@ module.exports = `
 .mso-font-width-full {
     mso-font-width: 100%;
 }
-.-mso-font-width-full {
-    mso-font-width: -100%;
-}
-.mso-text-raise-7_5 {
-    mso-text-raise: 30px;
-}
 .shadow-sm {
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
-}
-.text-decoration-none {
-    text-decoration: none;
 }
 .border-0 {
     border: 0;
@@ -249,7 +215,7 @@ module.exports = `
   
 </head>
 <body style="word-break: break-word; -webkit-font-smoothing: antialiased; margin: 0; width: 100%; padding: 0">
-  <div role="article" aria-roledescription="email" aria-label="Welcome to FocalTasks!" lang="en">
+  <div role="article" aria-roledescription="email" aria-label="Thank you for joining the beta program!" lang="en">
     
     <table style="width: 100%; font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif" cellpadding="0" cellspacing="0" role="presentation">
       <tr>
@@ -267,47 +233,34 @@ module.exports = `
                 <table style="width: 100%" cellpadding="0" cellspacing="0" role="presentation">
                   <tr>
                     <td class="sm-px-6" style="border-radius: 16px; border-width: 2px; border-style: solid; border-color: #e5e7eb; background-color: #fff; padding: 48px; text-align: left; font-size: 16px; line-height: 24px; color: #334155; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1)">
-                      <p style="margin: 0">Hello, {name} 👋</p>
+                      <p style="margin: 0">Hello 👋,</p>
                       <p style="margin: 0; margin-bottom: 24px; font-size: 24px; font-weight: 600; line-height: 24px; color: #000">
-                        Welcome to FocalTasks!
+                        Thank you for joining the beta program!
                       </p>
-                      <p style="margin: 0; margin-bottom: 24px">Here are a couple tips to get you started:</p>
+                      <p style="margin: 0; margin-bottom: 8px">You can now register for an account with the button below.</p>
+                      <p style="margin: 0; margin-bottom: 24px">
+                        If you know anyone who would also like to join the beta, just share this link with them! 😊
+                      </p>
+                      <div style="line-height: 100%">
+                        <a href="https://app.focaltasks.com/signup" class="hover-opacity-80" style="text-decoration: none; display: inline-block; border-radius: 8px; background-color: #007aff; padding-top: 14px; padding-bottom: 14px; padding-left: 16px; padding-right: 16px; text-align: center; font-size: 16px; font-weight: 600; color: #fff">
+                          <!--[if mso]>
+                            <i style="mso-font-width: -100%; mso-text-raise: 30px; letter-spacing: 24px">&#8202;</i>
+                          <![endif]-->
+                          <span style="mso-text-raise: 16px">Sign up &rarr;</span>
+                          <!--[if mso]>
+                            <i style="mso-font-width: -100%; letter-spacing: 24px">&#8202;</i>
+                          <![endif]-->
+                        </a>
+                      </div>
                       <table style="width: 100%" cellpadding="0" cellspacing="0" role="presentation">
                         <tr>
-                          <p style="margin: 0; margin-bottom: 8px; font-size: 18px; font-weight: 700">1. Drag and drop</p>
-                          <img src="https://mail.focaltasks.com/images/feature3.gif" alt="Feature 1 gif" style="margin-bottom: 8px; max-width: 100%; overflow: hidden; border-radius: 8px; border-width: 2px; border-style: solid; border-color: #e5e7eb">
-                        </tr>
-                        <tr>
-                          <p style="margin: 0; margin-bottom: 8px; font-size: 18px; font-weight: 700">2. Command palette</p>
-                          <img src="https://mail.focaltasks.com/images/feature4.gif" alt="Feature 2 gif" style="margin-bottom: 8px; max-width: 100%; overflow: hidden; border-radius: 8px; border-width: 2px; border-style: solid; border-color: #e5e7eb">
-                        </tr>
-                        <tr>
-                          <p style="margin: 0; margin-bottom: 8px; font-size: 18px; font-weight: 700">3. Sharing lists</p>
-                          <img src="https://mail.focaltasks.com/images/feature5.gif" alt="Feature 3 gif" style="margin-bottom: 8px; max-width: 100%; overflow: hidden; border-radius: 8px; border-width: 2px; border-style: solid; border-color: #e5e7eb">
+                          <td style="padding-top: 32px; padding-bottom: 32px">
+                            <div style="height: 2px; background-color: #e5e7eb; line-height: 1px">&zwnj;</div>
+                          </td>
                         </tr>
                       </table>
-                      <!-- <div class="leading-full">
-                        <a href="https://app.focaltasks.com/signup"
-                          class="inline-block py-3.5 px-4 rounded-lg text-base font-semibold text-center [text-decoration:none] text-white bg-[#007aff] hover:opacity-80]">
-                          <outlook>
-                            <i class="tracking-6 -mso-font-width-full mso-text-raise-7.5">&#8202;</i>
-                          </outlook>
-                          <span class="mso-text-raise-4">Sign up &rarr;</span>
-                          <outlook>
-                            <i class="tracking-6 -mso-font-width-full">&#8202;</i>
-                          </outlook>
-                        </a>
-                      </div> -->
-                      <p style="margin: 0; margin-bottom: 16px; margin-top: 16px">It's essential for us that we build a product that you'll love to use, so
-                        if
-                        you have questions or feedback just reply to this or any future emails. 📩
-                      </p>
-                      <p style="margin: 0; margin-bottom: 16px"><strong>Thank you so much for joining us!</strong> <br>Michael from
-                        FocalTasks</p>
-                      <p style="margin: 0">PS: Our public <a href="https://share.focaltasks.com/c8974465-95c3-444e-8d5f-522c65c37019" style="color: #007aff">roadmap</a> will tell
-                        you what we're working on right now
-                        and which
-                        features are coming next.</p>
+                      <p style="margin: 0; margin-bottom: 16px">If you didn't sign up, you can safely ignore this email.</p>
+                      <p style="margin: 0; margin-bottom: 16px">Thanks, <br>Michael from FocalTasks</p>
                     </td>
                   </tr>
                   <tr>
@@ -337,4 +290,5 @@ module.exports = `
   </div>
 </body>
 </html>
+
 `;
